@@ -10,3 +10,9 @@ class NumpyArray:
     def shape(self):
         return self.np_arr.shape
 
+    def slice(self, idx):
+        if len(self.np_arr.shape) == 1:
+            return self.np_arr[:idx]
+        else:
+            return self.np_arr[:idx, idx:]
+

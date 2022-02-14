@@ -29,5 +29,14 @@ class TestMatrix(unittest.TestCase):
     def test_shape(self):
         self.assertEqual((4, 4), self.matrix.shape())
 
+    def test_slice(self):
+        assert_array_equal(
+            np.array([
+                [3, 4],
+                [7, 8],
+            ]),
+            self.matrix.slice(2)
+        )
+
 if __name__ == '__main__':
     unittest.main()
