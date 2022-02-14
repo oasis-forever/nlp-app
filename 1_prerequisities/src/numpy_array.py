@@ -16,3 +16,6 @@ class NumpyArray:
         else:
             return self.np_arr[:idx, idx:]
 
+    def sum(self, arr):
+        return self.np_arr + arr
+

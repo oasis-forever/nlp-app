@@ -19,5 +19,17 @@ class TestVector(unittest.TestCase):
     def test_slice(self):
         assert_array_equal(np.array([ 1, 2, 3]), self.vector.slice(3))
 
+    def test_sum(self):
+        assert_array_equal(
+            np.array([2, 4, 6, 8, 10]),
+            self.vector.sum(self.vector.array())
+        )
+
+    def test_broadcasting_sum(self):
+        assert_array_equal(
+            np.array([11, 12, 13, 14, 15]),
+            self.vector.sum(10)
+        )
+
 if __name__ == '__main__':
     unittest.main()
