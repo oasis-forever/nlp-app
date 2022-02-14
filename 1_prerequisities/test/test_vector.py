@@ -31,5 +31,12 @@ class TestVector(unittest.TestCase):
             self.vector.sum(10)
         )
 
+    def test_substract(self):
+        vector = np.array([1, 2, 2, 0, 1])
+        assert_array_equal(
+            np.array([0, 0, 1, 4, 4]),
+            self.vector.substract(vector)
+        )
+
 if __name__ == '__main__':
     unittest.main()

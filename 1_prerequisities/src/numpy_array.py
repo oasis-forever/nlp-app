@@ -19,3 +19,6 @@ class NumpyArray:
     def sum(self, arr):
         return self.np_arr + arr
 
+    def substract(self, arr):
+        return self.np_arr - arr
+

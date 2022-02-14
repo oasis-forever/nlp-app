@@ -60,5 +60,22 @@ class TestMatrix(unittest.TestCase):
             self.matrix.sum(10)
         )
 
+    def test_substract(self):
+        matrix = np.array([
+            [ 1, 15, 14,  8],
+            [17,  9,  3, 19],
+            [16,  8, 19,  8],
+            [16,  3,  2, 12],
+        ])
+        assert_array_equal(
+            np.array([
+                [  0, -13, -11,  -4],
+                [-12,  -3,   4, -11],
+                [ -7,   2,  -8,   4],
+                [ -3,  11,  13,   4]
+            ]),
+            self.matrix.substract(matrix)
+        )
+
 if __name__ == '__main__':
     unittest.main()
