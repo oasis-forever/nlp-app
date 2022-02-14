@@ -10,5 +10,8 @@ class TestVector(unittest.TestCase):
         vector      = [1, 2, 3, 4, 5]
         self.vector = NumpyArray(vector)
 
+    def test_array(self):
+        assert_array_equal(np.array([1, 2, 3, 4, 5]), self.vector.array())
+
 if __name__ == '__main__':
     unittest.main()
