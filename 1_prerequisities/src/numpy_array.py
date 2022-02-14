@@ -7,3 +7,6 @@ class NumpyArray:
     def array(self):
         return self.np_arr
 
+    def shape(self):
+        return self.np_arr.shape
+

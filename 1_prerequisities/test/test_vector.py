@@ -13,5 +13,8 @@ class TestVector(unittest.TestCase):
     def test_array(self):
         assert_array_equal(np.array([1, 2, 3, 4, 5]), self.vector.array())
 
+    def test_shape(self):
+        self.assertEqual((5,), self.vector.shape())
+
 if __name__ == '__main__':
     unittest.main()

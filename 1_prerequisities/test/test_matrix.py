@@ -26,5 +26,8 @@ class TestMatrix(unittest.TestCase):
             self.matrix.array()
         )
 
+    def test_shape(self):
+        self.assertEqual((4, 4), self.matrix.shape())
+
 if __name__ == '__main__':
     unittest.main()
