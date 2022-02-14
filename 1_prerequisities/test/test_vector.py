@@ -50,5 +50,9 @@ class TestVector(unittest.TestCase):
             self.vector.multiply(2)
         )
 
+    def test_dot_product(self):
+        vector = np.array([1, 2, 2, 0, 1])
+        self.assertEqual(16, self.vector.dot_product(vector))
+
 if __name__ == '__main__':
     unittest.main()

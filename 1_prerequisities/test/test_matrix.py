@@ -99,5 +99,25 @@ class TestMatrix(unittest.TestCase):
             self.matrix.multiply(2)
         )
 
+    def test_dot_product(self):
+        matrix = np.array([
+            [ 1, 15, 14,  8],
+            [17,  9,  3, 19],
+            [16,  8, 19,  8],
+            [16,  3,  2, 12],
+        ])
+        assert_array_equal(
+            np.array([
+                [147,  69,  85, 118],
+                [347, 209, 237, 306],
+                [547, 349, 389, 494],
+                [747, 489, 541, 682]
+            ]),
+            self.matrix.dot_product(matrix)
+        )
+
+        vector = np.array([1, 2, 2, 0])
+        assert_array_equal(np.array([11, 31, 51, 71]), self.matrix.dot_product(vector))
+
 if __name__ == '__main__':
     unittest.main()

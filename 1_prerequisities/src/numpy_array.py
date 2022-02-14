@@ -25,3 +25,5 @@ class NumpyArray:
     def multiply(self, arr):
         return self.np_arr * arr
 
+    def dot_product(self, arr):
+        return np.dot(self.np_arr, arr)
