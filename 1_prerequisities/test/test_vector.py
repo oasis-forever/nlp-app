@@ -38,5 +38,17 @@ class TestVector(unittest.TestCase):
             self.vector.substract(vector)
         )
 
+    def test_multiply(self):
+        assert_array_equal(
+            np.array([1, 4, 9, 16, 25]),
+            self.vector.multiply(self.vector.array())
+        )
+
+    def test_broadcasting_multiply(self):
+        assert_array_equal(
+            np.array([2, 4, 6, 8, 10]),
+            self.vector.multiply(2)
+        )
+
 if __name__ == '__main__':
     unittest.main()

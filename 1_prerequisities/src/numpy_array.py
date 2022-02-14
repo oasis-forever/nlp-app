@@ -22,3 +22,6 @@ class NumpyArray:
     def substract(self, arr):
         return self.np_arr - arr
 
+    def multiply(self, arr):
+        return self.np_arr * arr
+

@@ -77,5 +77,27 @@ class TestMatrix(unittest.TestCase):
             self.matrix.substract(matrix)
         )
 
+    def test_multiply(self):
+        assert_array_equal(
+            np.array([
+                [  1,   4,   9,  16],
+                [ 25,  36,  49,  64],
+                [ 81, 100, 121, 144],
+                [169, 196, 225, 256],
+            ]),
+            self.matrix.multiply(self.matrix.array())
+        )
+
+    def test_broadcasting_multiply(self):
+        assert_array_equal(
+            np.array([
+                [ 2,  4,  6,  8],
+                [10, 12, 14, 16],
+                [18, 20, 22, 24],
+                [26, 28, 30, 32],
+            ]),
+            self.matrix.multiply(2)
+        )
+
 if __name__ == '__main__':
     unittest.main()
