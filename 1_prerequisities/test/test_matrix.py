@@ -130,5 +130,8 @@ class TestMatrix(unittest.TestCase):
     def test_numpy_sum(self):
         self.assertEqual(136, self.matrix.numpy_sum())
 
+    def test_mean(self):
+        self.assertEqual(8.5, self.matrix.mean())
+
 if __name__ == '__main__':
     unittest.main()

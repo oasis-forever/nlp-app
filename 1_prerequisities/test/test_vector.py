@@ -63,5 +63,8 @@ class TestVector(unittest.TestCase):
     def test_numpy_sum(self):
         self.assertEqual(15, self.vector.numpy_sum())
 
+    def test_mean(self):
+        self.assertEqual(3, self.vector.mean())
+
 if __name__ == '__main__':
     unittest.main()

@@ -25,3 +25,6 @@ class NumpyArray:
     def numpy_sum(self):
         return np.sum(self.np_arr)
 
+    def mean(self):
+        return np.mean(self.np_arr)
+
