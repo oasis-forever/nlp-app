@@ -14,3 +14,7 @@ class Matrix(NumpyArray):
     def random(self, seed, x, y):
         np.random.seed(seed)
         return np.random.rand(x, y)
+
+    def initialise_in_zeros(self, x, y):
+        return np.zeros((x, y))
+

@@ -14,3 +14,7 @@ class Vector(NumpyArray):
     def random(self, seed, n):
         np.random.seed(seed)
         return np.random.rand(n)
+
+    def initialise_in_zeros(self, n):
+        return np.zeros((n,))
+
