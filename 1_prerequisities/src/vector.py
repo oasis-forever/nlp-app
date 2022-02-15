@@ -15,10 +15,10 @@ class Vector(NumpyArray):
         np.random.seed(seed)
         return np.random.rand(n)
 
-    def initialise_in_zeros(self, n):
+    def zeros(self, n):
         return np.zeros((n,))
 
-    def initialise_in_ones(self, n):
+    def ones(self, n):
         return np.ones((n,))
 
     def empty(self, n):

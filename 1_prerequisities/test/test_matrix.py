@@ -158,7 +158,7 @@ class TestMatrix(unittest.TestCase):
             self.matrix.random(10, 4, 4)
         )
 
-    def test_initialise_in_zeros(self):
+    def test_zeros(self):
         assert_almost_equal(
             np.array([
                 [0, 0, 0, 0],
@@ -166,10 +166,10 @@ class TestMatrix(unittest.TestCase):
                 [0, 0, 0, 0],
                 [0, 0, 0, 0],
             ]),
-            self.matrix.initialise_in_zeros(4, 4)
+            self.matrix.zeros(4, 4)
         )
 
-    def test_initialise_in_ones(self):
+    def test_ones(self):
         assert_almost_equal(
             np.array([
                 [1, 1, 1, 1],
@@ -177,7 +177,7 @@ class TestMatrix(unittest.TestCase):
                 [1, 1, 1, 1],
                 [1, 1, 1, 1],
             ]),
-            self.matrix.initialise_in_ones(4, 4)
+            self.matrix.ones(4, 4)
         )
     def test_empty(self):
         self.assertEqual((4, 4), self.matrix.empty(4, 4).shape)

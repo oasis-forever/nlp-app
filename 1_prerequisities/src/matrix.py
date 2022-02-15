@@ -15,10 +15,10 @@ class Matrix(NumpyArray):
         np.random.seed(seed)
         return np.random.rand(x, y)
 
-    def initialise_in_zeros(self, x, y):
+    def zeros(self, x, y):
         return np.zeros((x, y))
 
-    def initialise_in_ones(self, x, y):
+    def ones(self, x, y):
         return np.ones((x, y))
 
     def empty(self, x, y):
