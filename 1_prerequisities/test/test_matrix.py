@@ -72,7 +72,7 @@ class TestMatrix(unittest.TestCase):
                 [  0, -13, -11,  -4],
                 [-12,  -3,   4, -11],
                 [ -7,   2,  -8,   4],
-                [ -3,  11,  13,   4]
+                [ -3,  11,  13,   4],
             ]),
             self.matrix.substract(mtx)
         )
@@ -111,7 +111,7 @@ class TestMatrix(unittest.TestCase):
                 [147,  69,  85, 118],
                 [347, 209, 237, 306],
                 [547, 349, 389, 494],
-                [747, 489, 541, 682]
+                [747, 489, 541, 682],
             ]),
             self.matrix.dot_product(mtx)
         )
