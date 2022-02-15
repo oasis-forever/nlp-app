@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from numpy.testing import assert_array_equal
+from numpy.testing import assert_array_equal, assert_almost_equal
 import sys
 sys.path.append('./1_prerequisities/src')
 from vector import Vector
@@ -65,6 +65,9 @@ class TestVector(unittest.TestCase):
 
     def test_mean(self):
         self.assertEqual(3, self.vector.mean())
+
+    def test_exp(self):
+        assert_almost_equal(np.array([2.7182818, 7.3890561, 20.0855369, 54.59815, 148.4131591]), self.vector.exp())
 
 if __name__ == '__main__':
     unittest.main()

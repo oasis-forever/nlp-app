@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from numpy.testing import assert_array_equal
+from numpy.testing import assert_array_equal, assert_almost_equal
 import sys
 sys.path.append('./1_prerequisities/src')
 from matrix import Matrix
@@ -132,6 +132,20 @@ class TestMatrix(unittest.TestCase):
 
     def test_mean(self):
         self.assertEqual(8.5, self.matrix.mean())
+
+    def test_exp(self):
+        # Mismatched elements: 11 / 16 (68.8%)
+        # Max absolute difference: 0.00416478
+        # Max relative difference: 3.46313149e-09
+        assert_almost_equal(
+            np.array([
+                [2.71828183e+00, 7.38905610e+00, 2.00855369e+01, 5.45981500e+01],
+                [1.48413159e+02, 4.03428793e+02, 1.09663316e+03, 2.98095799e+03],
+                [8.10308393e+03, 2.20264658e+04, 5.98741417e+04, 1.62754791e+05],
+                [4.42413392e+05, 1.20260428e+06, 3.26901737e+06, 8.88611052e+06],
+            ]),
+            self.matrix.exp()
+        )
 
 if __name__ == '__main__':
     unittest.main()

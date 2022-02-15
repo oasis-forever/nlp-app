@@ -28,3 +28,5 @@ class NumpyArray:
     def mean(self):
         return np.mean(self.np_arr)
 
+    def exp(self):
+        return np.exp(self.np_arr)
