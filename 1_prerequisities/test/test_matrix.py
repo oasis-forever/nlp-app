@@ -120,10 +120,12 @@ class TestMatrix(unittest.TestCase):
         assert_array_equal(np.array([11, 31, 51, 71]), self.matrix.dot_product(vec))
 
     def test_max(self):
-        self.assertEqual(16, self.matrix.max())
+        assert_array_equal(np.array([13, 14, 15, 16]), self.matrix.max(0))
+        assert_array_equal(np.array([4, 8, 12, 16]), self.matrix.max(1))
 
     def test_arg_max(self):
-        self.assertEqual(15, self.matrix.arg_max())
+        assert_array_equal(np.array([3, 3, 3, 3]), self.matrix.arg_max(0))
+        assert_array_equal(np.array([3, 3, 3, 3]), self.matrix.arg_max(1))
 
 if __name__ == '__main__':
     unittest.main()
