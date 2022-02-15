@@ -199,5 +199,26 @@ class TestMatrix(unittest.TestCase):
             self.matrix.hstack(mtx)
         )
 
+    def test_vstack(self):
+        mtx = np.array([
+            [ 1, 15, 14,  8],
+            [17,  9,  3, 19],
+            [16,  8, 19,  8],
+            [16,  3,  2, 12],
+        ])
+        assert_array_equal(
+            np.array([
+                [ 1,  2,  3,  4],
+                [ 5,  6,  7,  8],
+                [ 9, 10, 11, 12],
+                [13, 14, 15, 16],
+                [ 1, 15, 14,  8],
+                [17,  9,  3, 19],
+                [16,  8, 19,  8],
+                [16,  3,  2, 12],
+            ]),
+            self.matrix.vstack(mtx)
+        )
+
 if __name__ == '__main__':
     unittest.main()

@@ -34,3 +34,5 @@ class NumpyArray:
     def hstack(self, arr):
         return np.hstack((self.np_arr, arr))
 
+    def vstack(self, arr):
+        return np.vstack((self.np_arr, arr))
