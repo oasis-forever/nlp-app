@@ -30,3 +30,7 @@ class NumpyArray:
 
     def exp(self):
         return np.exp(self.np_arr)
+
+    def hstack(self, arr):
+        return np.hstack((self.np_arr, arr))
+

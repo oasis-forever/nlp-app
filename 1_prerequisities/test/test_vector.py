@@ -81,5 +81,12 @@ class TestVector(unittest.TestCase):
     def test_empty(self):
         self.assertEqual((5,), self.vector.empty(5).shape)
 
+    def test_hstack(self):
+        vec = np.array([1, 2, 2, 0, 1])
+        assert_array_equal(
+            np.array([1, 2, 3, 4, 5, 1, 2, 2, 0, 1]),
+            self.vector.hstack(vec)
+        )
+
 if __name__ == '__main__':
     unittest.main()

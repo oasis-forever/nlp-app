@@ -182,5 +182,22 @@ class TestMatrix(unittest.TestCase):
     def test_empty(self):
         self.assertEqual((4, 4), self.matrix.empty(4, 4).shape)
 
+    def test_hstack(self):
+        mtx = np.array([
+            [ 1, 15, 14,  8],
+            [17,  9,  3, 19],
+            [16,  8, 19,  8],
+            [16,  3,  2, 12],
+        ])
+        assert_array_equal(
+            np.array([
+                [ 1,  2,  3,  4,  1, 15, 14,  8],
+                [ 5,  6,  7,  8, 17,  9,  3, 19],
+                [ 9, 10, 11, 12, 16,  8, 19,  8],
+                [13, 14, 15, 16, 16,  3,  2, 12],
+            ]),
+            self.matrix.hstack(mtx)
+        )
+
 if __name__ == '__main__':
     unittest.main()
