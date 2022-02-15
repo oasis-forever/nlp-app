@@ -21,3 +21,7 @@ class NumpyArray:
 
     def dot_product(self, arr):
         return np.dot(self.np_arr, arr)
+
+    def numpy_sum(self):
+        return np.sum(self.np_arr)
+

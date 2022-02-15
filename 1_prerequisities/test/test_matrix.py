@@ -127,5 +127,8 @@ class TestMatrix(unittest.TestCase):
         assert_array_equal(np.array([3, 3, 3, 3]), self.matrix.arg_max(0))
         assert_array_equal(np.array([3, 3, 3, 3]), self.matrix.arg_max(1))
 
+    def test_numpy_sum(self):
+        self.assertEqual(136, self.matrix.numpy_sum())
+
 if __name__ == '__main__':
     unittest.main()

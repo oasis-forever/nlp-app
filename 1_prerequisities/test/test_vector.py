@@ -60,5 +60,8 @@ class TestVector(unittest.TestCase):
     def test_arg_max(self):
         self.assertEqual(4, self.vector.arg_max())
 
+    def test_numpy_sum(self):
+        self.assertEqual(15, self.vector.numpy_sum())
+
 if __name__ == '__main__':
     unittest.main()
