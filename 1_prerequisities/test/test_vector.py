@@ -3,12 +3,12 @@ import numpy as np
 from numpy.testing import assert_array_equal
 import sys
 sys.path.append('./1_prerequisities/src')
-from numpy_array import NumpyArray
+from vector import Vector
 
 class TestVector(unittest.TestCase):
     def setUp(self):
-        vector      = [1, 2, 3, 4, 5]
-        self.vector = NumpyArray(vector)
+        vec         = [1, 2, 3, 4, 5]
+        self.vector = Vector(vec)
 
     def test_array(self):
         assert_array_equal(np.array([1, 2, 3, 4, 5]), self.vector.array())
@@ -32,10 +32,10 @@ class TestVector(unittest.TestCase):
         )
 
     def test_substract(self):
-        vector = np.array([1, 2, 2, 0, 1])
+        vec = np.array([1, 2, 2, 0, 1])
         assert_array_equal(
             np.array([0, 0, 1, 4, 4]),
-            self.vector.substract(vector)
+            self.vector.substract(vec)
         )
 
     def test_multiply(self):
@@ -51,8 +51,8 @@ class TestVector(unittest.TestCase):
         )
 
     def test_dot_product(self):
-        vector = np.array([1, 2, 2, 0, 1])
-        self.assertEqual(16, self.vector.dot_product(vector))
+        vec = np.array([1, 2, 2, 0, 1])
+        self.assertEqual(16, self.vector.dot_product(vec))
 
     def test_max(self):
         self.assertEqual(5, self.vector.max())

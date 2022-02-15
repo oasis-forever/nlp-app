@@ -3,17 +3,17 @@ import numpy as np
 from numpy.testing import assert_array_equal
 import sys
 sys.path.append('./1_prerequisities/src')
-from numpy_array import NumpyArray
+from matrix import Matrix
 
 class TestMatrix(unittest.TestCase):
     def setUp(self):
-        matrix = [
+        mtx = [
             [ 1,  2,  3,  4],
             [ 5,  6,  7,  8],
             [ 9, 10, 11, 12],
             [13, 14, 15, 16],
         ]
-        self.matrix = NumpyArray(matrix)
+        self.matrix = Matrix(mtx)
 
     def test_array(self):
         assert_array_equal(
@@ -32,10 +32,10 @@ class TestMatrix(unittest.TestCase):
     def test_slice(self):
         assert_array_equal(
             np.array([
-                [3, 4],
-                [7, 8],
+                [2, 3, 4],
+                [6, 7, 8],
             ]),
-            self.matrix.slice(2)
+            self.matrix.slice(2, 1)
         )
 
     def test_sum(self):
@@ -61,7 +61,7 @@ class TestMatrix(unittest.TestCase):
         )
 
     def test_substract(self):
-        matrix = np.array([
+        mtx = np.array([
             [ 1, 15, 14,  8],
             [17,  9,  3, 19],
             [16,  8, 19,  8],
@@ -74,7 +74,7 @@ class TestMatrix(unittest.TestCase):
                 [ -7,   2,  -8,   4],
                 [ -3,  11,  13,   4]
             ]),
-            self.matrix.substract(matrix)
+            self.matrix.substract(mtx)
         )
 
     def test_multiply(self):
@@ -100,7 +100,7 @@ class TestMatrix(unittest.TestCase):
         )
 
     def test_dot_product(self):
-        matrix = np.array([
+        mtx = np.array([
             [ 1, 15, 14,  8],
             [17,  9,  3, 19],
             [16,  8, 19,  8],
@@ -113,11 +113,11 @@ class TestMatrix(unittest.TestCase):
                 [547, 349, 389, 494],
                 [747, 489, 541, 682]
             ]),
-            self.matrix.dot_product(matrix)
+            self.matrix.dot_product(mtx)
         )
 
-        vector = np.array([1, 2, 2, 0])
-        assert_array_equal(np.array([11, 31, 51, 71]), self.matrix.dot_product(vector))
+        vec = np.array([1, 2, 2, 0])
+        assert_array_equal(np.array([11, 31, 51, 71]), self.matrix.dot_product(vec))
 
     def test_max(self):
         self.assertEqual(16, self.matrix.max())
