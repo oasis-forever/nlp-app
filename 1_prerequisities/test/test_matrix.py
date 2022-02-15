@@ -147,5 +147,16 @@ class TestMatrix(unittest.TestCase):
             self.matrix.exp()
         )
 
+    def test_random(self):
+        assert_almost_equal(
+            np.array([
+                [0.7713206, 0.0207519, 0.6336482, 0.7488039],
+                [0.498507 , 0.2247966, 0.1980629, 0.7605307],
+                [0.1691108, 0.0883398, 0.6853598, 0.9533933],
+                [0.0039483, 0.5121923, 0.812621 , 0.6125261],
+            ]),
+            self.matrix.random(10, 4, 4)
+        )
+
 if __name__ == '__main__':
     unittest.main()

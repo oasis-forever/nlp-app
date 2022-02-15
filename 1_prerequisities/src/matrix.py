@@ -10,3 +10,7 @@ class Matrix(NumpyArray):
 
     def arg_max(self, axis):
         return np.argmax(self.np_arr, axis=axis)
+
+    def random(self, seed, x, y):
+        np.random.seed(seed)
+        return np.random.rand(x, y)

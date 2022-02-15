@@ -10,3 +10,7 @@ class Vector(NumpyArray):
 
     def arg_max(self):
         return np.argmax(self.np_arr)
+
+    def random(self, seed, n):
+        np.random.seed(seed)
+        return np.random.rand(n)

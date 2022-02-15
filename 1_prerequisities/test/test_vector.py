@@ -69,5 +69,8 @@ class TestVector(unittest.TestCase):
     def test_exp(self):
         assert_almost_equal(np.array([2.7182818, 7.3890561, 20.0855369, 54.59815, 148.4131591]), self.vector.exp())
 
+    def test_random(self):
+        assert_almost_equal(np.array([0.7713206, 0.0207519, 0.6336482, 0.7488039, 0.498507]), self.vector.random(10, 5))
+
 if __name__ == '__main__':
     unittest.main()
