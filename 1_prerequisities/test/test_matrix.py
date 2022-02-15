@@ -122,5 +122,8 @@ class TestMatrix(unittest.TestCase):
     def test_max(self):
         self.assertEqual(16, self.matrix.max())
 
+    def test_arg_max(self):
+        self.assertEqual(15, self.matrix.arg_max())
+
 if __name__ == '__main__':
     unittest.main()

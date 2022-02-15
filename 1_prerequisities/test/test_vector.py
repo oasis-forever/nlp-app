@@ -57,5 +57,8 @@ class TestVector(unittest.TestCase):
     def test_max(self):
         self.assertEqual(5, self.vector.max())
 
+    def test_arg_max(self):
+        self.assertEqual(4, self.vector.arg_max())
+
 if __name__ == '__main__':
     unittest.main()

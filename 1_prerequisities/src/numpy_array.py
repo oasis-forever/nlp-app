@@ -31,3 +31,5 @@ class NumpyArray:
     def max(self):
         return np.max(self.np_arr)
 
+    def arg_max(self):
+        return np.argmax(self.np_arr)
