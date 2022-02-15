@@ -27,3 +27,7 @@ class NumpyArray:
 
     def dot_product(self, arr):
         return np.dot(self.np_arr, arr)
+
+    def max(self):
+        return np.max(self.np_arr)
+

@@ -54,5 +54,8 @@ class TestVector(unittest.TestCase):
         vector = np.array([1, 2, 2, 0, 1])
         self.assertEqual(16, self.vector.dot_product(vector))
 
+    def test_max(self):
+        self.assertEqual(5, self.vector.max())
+
 if __name__ == '__main__':
     unittest.main()

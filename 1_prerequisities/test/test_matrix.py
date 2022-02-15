@@ -119,5 +119,8 @@ class TestMatrix(unittest.TestCase):
         vector = np.array([1, 2, 2, 0])
         assert_array_equal(np.array([11, 31, 51, 71]), self.matrix.dot_product(vector))
 
+    def test_max(self):
+        self.assertEqual(16, self.matrix.max())
+
 if __name__ == '__main__':
     unittest.main()
