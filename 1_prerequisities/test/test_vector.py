@@ -78,5 +78,8 @@ class TestVector(unittest.TestCase):
     def test_initialise_in_ones(self):
         assert_almost_equal(np.array([1, 1, 1, 1, 1]), self.vector.initialise_in_ones(5))
 
+    def test_empty(self):
+        self.assertEqual((5,), self.vector.empty(5).shape)
+
 if __name__ == '__main__':
     unittest.main()

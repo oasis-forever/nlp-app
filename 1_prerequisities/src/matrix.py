@@ -20,3 +20,6 @@ class Matrix(NumpyArray):
 
     def initialise_in_ones(self, x, y):
         return np.ones((x, y))
+
+    def empty(self, x, y):
+        return np.empty((x, y))

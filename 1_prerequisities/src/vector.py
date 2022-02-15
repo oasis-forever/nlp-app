@@ -20,3 +20,6 @@ class Vector(NumpyArray):
 
     def initialise_in_ones(self, n):
         return np.ones((n,))
+
+    def empty(self, n):
+        return np.empty((n,))

@@ -179,6 +179,8 @@ class TestMatrix(unittest.TestCase):
             ]),
             self.matrix.initialise_in_ones(4, 4)
         )
+    def test_empty(self):
+        self.assertEqual((4, 4), self.matrix.empty(4, 4).shape)
 
 if __name__ == '__main__':
     unittest.main()
