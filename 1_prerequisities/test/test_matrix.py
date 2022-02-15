@@ -169,5 +169,16 @@ class TestMatrix(unittest.TestCase):
             self.matrix.initialise_in_zeros(4, 4)
         )
 
+    def test_initialise_in_ones(self):
+        assert_almost_equal(
+            np.array([
+                [1, 1, 1, 1],
+                [1, 1, 1, 1],
+                [1, 1, 1, 1],
+                [1, 1, 1, 1],
+            ]),
+            self.matrix.initialise_in_ones(4, 4)
+        )
+
 if __name__ == '__main__':
     unittest.main()

@@ -18,3 +18,5 @@ class Matrix(NumpyArray):
     def initialise_in_zeros(self, x, y):
         return np.zeros((x, y))
 
+    def initialise_in_ones(self, x, y):
+        return np.ones((x, y))

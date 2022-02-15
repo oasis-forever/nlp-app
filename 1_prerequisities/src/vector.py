@@ -18,3 +18,5 @@ class Vector(NumpyArray):
     def initialise_in_zeros(self, n):
         return np.zeros((n,))
 
+    def initialise_in_ones(self, n):
+        return np.ones((n,))
